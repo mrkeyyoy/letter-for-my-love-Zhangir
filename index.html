@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Письмо для тебя</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="screen1" class="container">
+        <img src="cat.jpg" alt="бе" class="main-image">
+
+        <h1>Я ЛЮБЛЮ ТЕБЯ ЖАНГИР!!</h1>
+        <h1>(´・ω・｀)</h1>
+        <p class="small-text">Нажми на кнопочку пжпж★</p>
+
+        <button class="startButton" id="startButton">Нажми меня!! (•▱•)</button>
+    </div>
+    
+    <div id="screen2" style="display: none;" class="container">
+        <img src="letter.jpg" alt="ag" class="main-image">
+        <h1>Тебе принесли письмо!! ⊙０⊙</h1>
+        <p class="small-text">Откроешь его?</p>
+        <button class="yes-button" id="yes-button">ДА!!</button>
+        <button class="no-button" id="no-button">Не</button>
+    </div>
+
+    <div id="screen3no" style="display: none;" class="container">
+        <img src="sad.jpg" alt="ag" class="main-image">
+        <h1>Ну блиииин... (◞‸◟,) </h1>
+        <p class="small-text">Давай заново?</p>
+        <button class="repeat-button" id="repeat-button">Дава</button>
+    </div>
+    
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <img src="pismo.jpg" alt="Вопрос" class="modal-image">
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
