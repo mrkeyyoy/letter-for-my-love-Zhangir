@@ -7,19 +7,22 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow-y: hidden;
 }
 
 .container {
     text-align: center;
+    align-items: center;
     background-color: #ffffff;
-    align-self: center;
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 10px 20px #FFD394;
+    gap: 20px;
+    z-index: 1;
 }
 
 .main-image {
-    width: 200px; /* квадратная картинка */
+    width: 200px; 
     height: 200px;
     object-fit: cover;
     border-radius: 15px;
@@ -80,7 +83,7 @@ Button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.279); /* полупрозрачный фон */
+    background-color: rgba(0, 0, 0, 0.279); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,13 +102,121 @@ Button:hover {
     background-color: white;
     padding: 30px;
     border-radius: 15px;
-    max-height: 80vh; /* максимум по высоте */
-    overflow-y: auto; /* вот это даёт прокрутку */
+    max-height: 80vh; 
+    overflow-y: auto; 
     text-align: center;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-out {
+    opacity: 0;
+    transform: scale(0.8);
 }
 
 .modal-image {
     width: 100%;
-    max-width: 300px;
-    margin-bottom: 20px;
+    height: 100%;
+    object-fit: cover;
+}
+.hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    pointer-events: none;
+}
+.heart {
+    position: absolute;
+    color: #FA7089;
+    font-size: 30px;
+    animation: fall 5s linear forwards;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(100vh) rotate(var(--rotation));
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(100vh) rotate(var(--rotation));
+        opacity: 0;
+    }
+}
+
+
+.ye-but {
+    padding: 10px 20px;
+    font-family: "Oswald", sans-serif;
+    font-size: 16px;
+    background-color: #FA7089;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.ye-but:hover {
+    background-color: #FF9BA9;
+    transform: scale(1.1);
+}
+
+.no-but {
+    padding: 10px 25px;
+    font-family: "Oswald", sans-serif;
+    font-size: 16px;
+    background-color: #C4D18B;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.no-but:hover {
+    background-color: #7ca557;
+    transform: scale(1.1);
+}
+.happy {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.279); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+    visibility: visible;
+    z-index: 999;
+}
+
+.happy.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.happy-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-height: 80vh; 
+    overflow-y: auto; 
+    text-align: center;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.happy-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

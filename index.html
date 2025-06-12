@@ -8,16 +8,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </head>
 <body>
-  <div id="screen1" class="container">
-        <img src="cat.jpg" alt="бе" class="main-image">
-
-        <h1>Я ЛЮБЛЮ ТЕБЯ ЖАНГИР!!</h1>
-        <h1>(´・ω・｀)</h1>
-        <p class="small-text">Нажми на кнопочку пжпж★</p>
-
-        <button class="startButton" id="startButton">Нажми меня!! (•▱•)</button>
+    <div class="hearts"></div>
+    <audio id="bg-music" loop>
+        <source src="bg-music.mp3" type="audio/mpeg">
+    </audio>
+    <div id="screen1" class="container">
+            <img src="cat.jpg" alt="бе" class="main-image">
+            <h1>Я ЛЮБЛЮ ТЕБЯ ЖАНГИР!!</h1>
+            <h1>(´・ω・｀)</h1>
+            <p class="small-text">Нажми на кнопочку пжпж★</p>
+            <button class="startButton" id="startButton">Нажми меня!! (•▱•)</button>
     </div>
     
     <div id="screen2" style="display: none;" class="container">
@@ -28,19 +31,42 @@
         <button class="no-button" id="no-button">Не</button>
     </div>
 
-    <div id="screen3no" style="display: none;" class="container">
+    <div id="screen3" style="display: none;" class="container">
         <img src="sad.jpg" alt="ag" class="main-image">
         <h1>Ну блиииин... (◞‸◟,) </h1>
         <p class="small-text">Давай заново?</p>
         <button class="repeat-button" id="repeat-button">Дава</button>
     </div>
-    
-    <div id="modal" class="modal hidden">
-        <div class="modal-content">
-            <img src="pismo.jpg" alt="Вопрос" class="modal-image">
-            
+
+    <div id="screen4" style="display: none;" class="container">
+        <img src="us.jpg" alt="ag" class="main-image">
+        <h1>МЫЫЫ??!?</h1>
+        <p class="small-text">◔ᴗ◔</p>
+        <button class="us-button" id="us-button">НУ МЫ!!</button>
+    </div>
+
+    <div id="screen5" style="display: none;" class="container">
+        <img src="ring.jpg" alt="ag" class="main-image">
+        <h1>?</h1>
+        <p class="small-text">°ω°</p>
+        <div class="button-container">
+            <button class="ye-but" id="ye-but">ДА!!</button>
+            <button class="no-but" id="no-but">Не</button>
         </div>
     </div>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <img src="pismo.jpg" alt="письмо" class="modal-image">
+        </div>
+    </div>
+
+    <div id="happy" class="happy hidden">
+        <div class="happy-content">
+            <img src="happy.jpg" alt="письмо" class="happy-image">
+        </div>
+    </div>
+
 
     <script src="script.js"></script>
 </body>
