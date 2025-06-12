@@ -107,10 +107,11 @@ document.getElementById("us-button").addEventListener("click", function() {
 });
 
 
-
-
-
+const closeModalButton = document.getElementById("closeModalButton");
 const modal = document.getElementById("modal");
+
+
+
 const modalContent = document.querySelector(".modal-content");
 // функция для закрытия модалки с анимацией
 function closeModal() {
@@ -122,6 +123,12 @@ function closeModal() {
         modalContent.classList.remove("fade-out");
     }, 500);
 }
+
+closeModalButton.addEventListener("click", function(event) {
+    if (event.target === closeModalButton) {
+        closeModal();
+    }
+});
 
 // закрытие при клике вне письма
 modal.addEventListener("click", function(event) {
