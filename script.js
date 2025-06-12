@@ -147,11 +147,12 @@ yesButton.addEventListener("click", function() {
     });
     document.getElementById("happy").classList.remove("hidden");
     sendTelegramMessage("Согласился выйти замуж!");
-    playOpenSound();
+    playYeahSound();
 });
 
 noButton.addEventListener("click", function() {
     noClickCount++;
+    playClickSound();
     sendTelegramMessage("НЕ СОГЛАСЕН ЗАМУЖ!!");
     // Увеличиваем ДА
     let newYesScale = 1 + noClickCount * 0.1;
