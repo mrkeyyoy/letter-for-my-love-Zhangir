@@ -152,8 +152,8 @@ yesButton.addEventListener("click", function() {
 
 noButton.addEventListener("click", function() {
     noClickCount++;
-    playClickSound();
     sendTelegramMessage("НЕ СОГЛАСЕН ЗАМУЖ!!");
+    playCrySound();
     // Увеличиваем ДА
     let newYesScale = 1 + noClickCount * 0.1;
     yesButton.style.transform = `scale(${newYesScale})`;
